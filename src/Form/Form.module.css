@@ -1,0 +1,19 @@
+.Form {
+  padding: 5rem;
+}
+
+.Form fieldset > label:not(:first-of-type) {
+  margin-left: 3rem;
+}
+
+.Form fieldset > label {
+  margin-right: 1rem;
+}
+
+
+.FormBtn {
+  float: right;
+  margin-top: 1rem;
+  padding: 1rem .5rem;
+  text-transform: uppercase;
+}
