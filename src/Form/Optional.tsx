@@ -15,10 +15,6 @@ export const Optional = memo<OptionalProps>(({
                                                            onChange
                                                        }) => {
 
-    const _handleOptionalFormChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        onChange('optional', e)
-    }
-
     return (
         <fieldset>
             <legend>Optional:</legend>
@@ -27,7 +23,7 @@ export const Optional = memo<OptionalProps>(({
             <input type="checkbox"
                    name="newsLetter"
                    checked={values.newsLetter}
-                   onChange={_handleOptionalFormChange}
+                   onChange={onChange}
             />
 
             <label>Gender: </label>
@@ -37,7 +33,7 @@ export const Optional = memo<OptionalProps>(({
                        id="female"
                        checked={values.gender === 'F'}
                        value="F"
-                       onChange={_handleOptionalFormChange}
+                       onChange={onChange}
                 />
             </label>
             <label htmlFor="gender">M:
@@ -46,7 +42,7 @@ export const Optional = memo<OptionalProps>(({
                        id="male"
                        checked={values.gender === 'M'}
                        value="M"
-                       onChange={_handleOptionalFormChange}
+                       onChange={onChange}
                 />
             </label>
 

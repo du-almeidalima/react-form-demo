@@ -1,4 +1,4 @@
-import React, { ChangeEvent, memo } from 'react';
+import React, {ChangeEvent, memo} from 'react';
 
 export type BasicInfoForm = {
     name: string;
@@ -11,23 +11,19 @@ export type BasicInfoProps = {
 }
 
 export const BasicInfo: React.FC<BasicInfoProps> = memo<BasicInfoProps>(({
-                                                 values,
-                                                 onChange
-                                             }) => {
-
-    const _handleBasicInfoFormChange = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange('basicInfo', e)
-    }
+                                                                             values,
+                                                                             onChange
+                                                                         }) => {
 
     return (
         <fieldset>
             <legend>Basic Info:</legend>
 
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" value={values.name} onChange={_handleBasicInfoFormChange}/>
+            <input type="text" id="name" name="name" value={values.name} onChange={onChange}/>
 
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={values.email} onChange={_handleBasicInfoFormChange}/>
+            <input type="email" id="email" name="email" value={values.email} onChange={onChange}/>
         </fieldset>
     );
 });
